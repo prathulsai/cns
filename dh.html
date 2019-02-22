@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+function fun1(){
+var q=document.getElementById("1").value;
+var a=document.getElementById("2").value;
+var xa=2+Math.floor(Math.random()*(q-2));
+var ya=Math.pow(a,xa)%q;
+var xb=2+Math.floor(Math.random()*(q-2));
+var yb=Math.pow(a,xb)%q;
+var k1=Math.pow(yb,xa)%q;
+var k2=Math.pow(ya,xb)%q;
+document.getElementById("out1").value=k1;
+document.getElementById("out2").value=k2;
+}
+</script>
+<input type="text" id="1" placeholder="prime no of a"><input type="text" id="2" placeholder="prime no of b">
+<input type="submit" onclick=fun1()></input><br><br>
+<input type="text" id="out1" placeholder="key of a"></input>
+<input type="text" id="out2" placeholder="key of b"></input>
+</body>
+</html>
