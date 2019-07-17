@@ -2,11 +2,11 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.swing.JOptionPane;
-class blowfish{
+class rc4{
 	public static void main(String[] args) throws Exception{
-		KeyGenerator kg=KeyGenerator.getInstance("blowfish");
+		KeyGenerator kg=KeyGenerator.getInstance("rc4");
 		SecretKey sk=kg.generateKey();
-		Cipher ch=Cipher.getInstance("blowfish");
+		Cipher ch=Cipher.getInstance("rc4");
 		ch.init(Cipher.ENCRYPT_MODE,sk);
 		String input=JOptionPane.showInputDialog("enter input");
 		byte[] emsg=ch.doFinal(input.getBytes());
